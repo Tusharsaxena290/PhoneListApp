@@ -1,12 +1,15 @@
 package adt;
 
 public interface javaAdt<contact> {
-    boolean add(contact data);
+    public boolean add(contact data);
 
 
-    contact remove();
+    public contact remove();
 
-    void viewAllContacts();
+
+    public void viewAllContacts();
+
+    contact search(contact data);
 
 
 }

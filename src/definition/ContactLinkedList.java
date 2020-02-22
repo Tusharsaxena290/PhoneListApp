@@ -107,7 +107,22 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
 
     }
 
-    private static class Node<contact> {
+    public contact search(contact data) {
+
+        contact response = null;
+        for (int i = 0; i < size; i++) {
+            contact item = this.getNode(i).getData();
+            if (item.equals(data)) {
+                response = item;
+                break;
+            }
+        }
+        return response;
+    }
+
+}
+
+class Node<contact> {
         Node<contact> next;
         contact data;
 
@@ -130,4 +145,4 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
 
     }
 
-}
+
