@@ -7,8 +7,28 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
     private int size;
     @Override
     public boolean add(contact dataItem) {
-        return false;
+
+        return add(data, size);
     }
+
+    private boolean addFirst(contact data) {
+        head = new Node((Node) data, head);
+        size++;
+        return true;
+    }
+
+    private boolean addAfter(contact data, Node<contact> node) {
+        node.next = new Node((Node) data, node.next);
+        size++;
+        return true;
+    }
+
+    private boolean add(contact data, int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        }
+    }
+
 
     @Override
     public boolean remove() {
@@ -40,6 +60,7 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
         public contact getData() {
             return data;
         }
+
     }
 
 }

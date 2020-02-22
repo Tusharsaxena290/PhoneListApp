@@ -7,6 +7,7 @@ public interface javaAdt<contact> {
 
     void viewAllContacts();
 
+
 }
 
 
