@@ -4,7 +4,7 @@ public interface javaAdt<contact> {
     boolean add(contact data);
 
 
-    boolean remove();
+    contact remove();
 
     void viewAllContacts();
 

@@ -93,8 +93,8 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
 
 
     @Override
-    public boolean remove() {
-        return false;
+    public contact remove() {
+        return remove(size - 1);
     }
 
     @Override
