@@ -6,6 +6,7 @@ public interface javaAdt<contact> {
     boolean remove();
 
     void viewAllContacts();
+
 }
 
 
