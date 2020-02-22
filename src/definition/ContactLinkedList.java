@@ -28,6 +28,18 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
             this.next = next;
             this.data = data;
         }
+
+        public Node(contact data) {
+            this.data = data;
+        }
+
+        public Node<contact> getNext() {
+            return next;
+        }
+
+        public contact getData() {
+            return data;
+        }
     }
 
 }
