@@ -8,7 +8,7 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
     @Override
     public boolean add(contact dataItem) {
 
-        return add(data, size);
+        return add(dataItem, size);
     }
 
     private boolean addFirst(contact data) {
@@ -26,7 +26,25 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
     private boolean add(contact data, int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException(Integer.toString(index));
+
         }
+        if (index == 0) {
+            addFirst(data);
+        } else {
+            Node<contact> node = getNode(index - 1);
+            addAfter(data, node);
+        }
+
+        return true;
+    }
+
+    public Node<contact> getNode(int index) {
+        Node<contact> node = head;
+        for (int i = 0; i < index && node != null; i++) {
+            node = node.getNext();
+        }
+        return node;
+
     }
 
 
