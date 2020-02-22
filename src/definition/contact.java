@@ -48,4 +48,16 @@ public class contact {
         Phonenumber = phonenumber;
     }
 
+    @Override
+    public String toString() {
+        return ("---Here are all your contacts---\n" +
+                "-------- * -------- * -------- * --------\n" +
+                "FirstName:" + getFirstName() + "\nLastName:" + getLastName() + "\nContact Number(s)" + getPhonenumber()
+                + "\nEmail address" + getEmail() +
+                "\n-------- * -------- * -------- * --------" +
+                "\n-------- * -------- * -------- * --------");
+
+
+    }
+
 }
