@@ -48,6 +48,7 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
     }
 
     private contact removeFirst() {
+
         if (head != null) {
             head = head.next;
 
@@ -58,8 +59,37 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
         } else {
             return null;
         }
-        return head.data;
+        return temp.getData();
     }
+
+    private contact removeAfter(Node<contact> node) {
+        contact response = null;
+        Node<contact> temp = node.getNext();
+        if (temp != null) {
+            node.next = temp.getNext();
+        }
+        if (response != null) {
+            size--;
+            response = temp.getData();
+        }
+        return response;
+    }
+
+    public contact remove(int index) {
+        contact response = null;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            removeFirst();
+        } else {
+            Node<contact> temp = getNode(index - 1);
+            response = removeAfter(temp);
+        }
+        return response;
+    }
+
+
+
 
 
     @Override
