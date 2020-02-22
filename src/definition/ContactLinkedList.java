@@ -47,6 +47,20 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
 
     }
 
+    private contact removeFirst() {
+        if (head != null) {
+            head = head.next;
+
+        }
+        Node<contact> temp = head;
+        if (temp != null) {
+            size--;
+        } else {
+            return null;
+        }
+        return head.data;
+    }
+
 
     @Override
     public boolean remove() {
