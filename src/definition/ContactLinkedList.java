@@ -99,6 +99,11 @@ public class ContactLinkedList<contact> implements javaAdt<contact> {
 
     @Override
     public void viewAllContacts() {
+        for (int i = 0; i < size; i++) {
+            contact data = this.getNode(i - 1).getData();
+            System.out.println(data);
+
+        }
 
     }
 
