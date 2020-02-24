@@ -4,7 +4,7 @@ import adt.javaAdt;
 
 public class ContactLinkedList<contact> implements javaAdt<contact> {
     Node<contact> head = null;
-    private int size;
+    public int size;
     @Override
     public boolean add(contact dataItem) {
 

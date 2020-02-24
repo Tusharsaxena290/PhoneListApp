@@ -43,7 +43,30 @@ public class Main {
                         System.out.println("Phone Number:");
                         MobNumber = sc.next();
                         phoneNumber.add(MobNumber);
-                        System.out.println("Would you like to ask another number? (y/n):");
+                        System.out.println("Would you like to add another number? (y/n):");
+                        choose = sc.next().charAt(0);
+                        if (choose == 'y') {
+                            System.out.println("Phone Number:");
+                            MobNumber = sc.next();
+                            phoneNumber.add(MobNumber);
+                            System.out.println("Would you like to add another number? (y/n):");
+
+                        } else if (choose == 'n') {
+                            break;
+
+                        }
+                        System.out.println("Email:");
+                        email = sc.next();
+                        contact contact = new contact(firstName, lastName, email, phoneNumber);
+
+
+                        break; // break of case 1
+                    case 2:
+                        if (contactList.size == 0) {
+
+
+                        }
+
 
 
 
