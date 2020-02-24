@@ -67,6 +67,10 @@ public class Main {
 
                     case 3:
                         System.out.println("enter the first name to search for");
+                        firstName = sc.next();
+                        int counter = 0;
+
+
 
 
 
