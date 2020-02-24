@@ -16,5 +16,8 @@ public class Main {
         int select;
         ContactLinkedList<contact> contactList = new ContactLinkedList<>();
         ArrayList<String> fullName = new ArrayList<>();
+        while (true) {
+            System.out.println("Welcome to Tushar's Contact List Application\n");
+        }
     }
 }
