@@ -33,7 +33,7 @@ public class Main {
                     case 1:
                         System.out.println("You have chosen to add a new contact:");
                         sc.nextLine();
-                        System.out.println("enter the name:");
+                        System.out.println("Please enter the name");
                         sc.next();
                         System.out.println("First Name:");
                         firstName = sc.next();
@@ -66,9 +66,40 @@ public class Main {
                         break;//break for case 2
 
                     case 3:
-                        System.out.println("enter the first name to search for");
+                        System.out.println("you could search for a contact by their first names:");
                         firstName = sc.next();
                         int counter = 0;
+                        for (int j = 0; j < fullName.size(); j++) {
+                            if (fullName.get(j).contains(firstName)) {
+                                counter++;
+
+
+                            }
+                            System.out.println(counter + " Match Found");
+                            break;
+                        }
+                    case 4:
+                        System.out.println("Here are all your contacts");
+                        for (int i = 0; i < fullName.size(); i++) {
+                            System.out.println(i + 1 + "." + fullName.get(i));
+                            System.out.println("Press the number against the contact to delete it:");
+                            int number = sc.nextInt();
+                            contactList.remove(number - 1);
+                            System.out.println(fullName.get(number - 1) + "'s contact deleted");
+                            fullName.remove(number - 1);
+                            break;
+
+                        }
+
+                    case 5:
+                        break;
+
+                    default:
+                        System.out.println("sorry , its a wrong choice");
+                        break;
+
+
+
 
 
 
