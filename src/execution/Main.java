@@ -18,6 +18,8 @@ public class Main {
         int select;
         ContactLinkedList<contact> contactList = new ContactLinkedList<>();
         ArrayList<String> fullName = new ArrayList<>();
+        ArrayList<String> phoneNumber = new ArrayList<>();
+        String MobNumber;
         while (true) {
             System.out.println("Welcome to Tushar's Contact List Application\n" +
                     "Press 1 to add the new contact\n" +
@@ -32,12 +34,19 @@ public class Main {
                         System.out.println("You have chosen to add a new contact:");
                         sc.nextLine();
                         System.out.println("enter the name:");
-                        sc.nextLine();
+                        sc.next();
                         System.out.println("First Name:");
-                        firstName = sc.nextLine();
+                        firstName = sc.next();
                         System.out.println("Last Name:");
-                        lastName = sc.nextLine();
+                        lastName = sc.next();
                         fullName.add(firstName + lastName);
+                        System.out.println("Phone Number:");
+                        MobNumber = sc.next();
+                        phoneNumber.add(MobNumber);
+                        System.out.println("Would you like to ask another number? (y/n):");
+
+
+
 
 
                 }
