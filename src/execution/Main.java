@@ -62,10 +62,14 @@ public class Main {
 
                         break; // break of case 1
                     case 2:
-                        if (contactList.size == 0) {
+                        contactList.viewAllContacts();
+                        break;//break for case 2
+
+                    case 3:
+                        System.out.println("enter the first name to search for");
 
 
-                        }
+
 
 
 
